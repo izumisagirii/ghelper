@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+build/
+test_genshin/CMakeLists.txt.user

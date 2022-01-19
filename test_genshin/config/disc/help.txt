@@ -1,0 +1,17 @@
+#DISC
+<a href="https://asoulwiki.com/member/diana/"><font size="+5" color="#E799B0" style="font-family:黑体"> 关注嘉然顿顿解馋!</font></a>
+(右键复制链接)<br/>
+<img src="../config/disc/diana.jpg" alt="master!"><br/>
+<font size="+2" color="#66FF00"> 软件说明 </font> <br/>
+本软件基于Qt、openCV和winAPI开发<br/>
+原理是模拟鼠标和键盘操作<br/>
+<font size="+2" color="#0066FF"> 使用 </font><br/>
+在下方依次选择要执行的脚本，双击可展示说明<br/>
+点击[刷新]重新加载和选择脚本<br/>
+点击[运行]或使用(Ctrl+F1)运行脚本队列或强制终止<br/>
+脚本分为开发者编写的内置脚本和自定义的脚本<br/>
+自定义脚本位于user_script文件夹<br/>
+编写请参照其中的demo示例（尚在开发中）<br/>
+<font size="+2" color="#FF0066"> 其他 </font><br/>
+开发者：sdfs<br/>
+本软件完全依赖系统api实现游戏辅助功能<br/>
