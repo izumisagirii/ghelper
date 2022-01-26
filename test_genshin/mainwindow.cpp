@@ -231,17 +231,6 @@ void MainWindow::on_help_clicked()
 //    qDebug()<<event->key();//按键的枚举值
 //}
 void MainWindow::checkType(Hook::Type type){
-//    switch (type) {
-//    case Hook::F1:
-//        qDebug()<<"f1";
-//        break;
-//    case Hook::F2:
-//        qDebug()<<"f2";
-//        break;
-//    default:
-//        break;
-//    }
-   // log.pushAndShowThreadSafe("hello this is a test");
     if(this->work_thread.start_task(this->selected_task)){
         this->on_reload_clicked();
     }

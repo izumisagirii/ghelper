@@ -3,10 +3,17 @@
 #include <opencv2/opencv.hpp>
 #include <QTreeWidgetItem>
 #include <locate.h>
+
+#define QUIT_CHECK if(!running){ \
+    GHmap.force_quit();  \
+    GHwindow.force_quit();  \
+    return false;  \
+}
+
 enum SCRIPT{
-    USER_SCRIPT,TEST_LOCATE,TEST_TP
+    USER_SCRIPT,TEST_LOCATE,TEST_TP,TEST_TRACK
 };
-constexpr int SCRIPT_NUM = 2;
+constexpr int SCRIPT_NUM = 3;
 struct task{
     bool user;
     std::string name;
@@ -30,6 +37,7 @@ private:
     void wait_task_end();
     bool TASK_testTP();
     bool TASK_testLOCATE();
+    bool TASK_testTRACK();
     std::thread _task;
     std::thread _ending;
     bool running = false;

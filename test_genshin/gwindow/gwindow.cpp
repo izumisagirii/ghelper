@@ -83,7 +83,7 @@ void gwindow::grab_thread(int fps){
     HDC hdc = CreateCompatibleDC(hdcScreen);
     HBITMAP hbmp = CreateCompatibleBitmap(hdcScreen, width, height);
     SelectObject(hdc, hbmp);
-    int frame_time =(fps>100||fps==0)? 0:1000/fps;
+    DWORD frame_time =(fps>100||fps<=0)? 0:1000/fps;
     while(_grabing){
         DWORD start_t = GetTickCount();
         BitBlt(hdc, 0, 0, width, height, hdcScreen, 0, 0, SRCCOPY);
@@ -247,4 +247,27 @@ bool gwindow::drag_map(bool level, bool vertical,bool len,bool ven){
     }
     this->_window_mu.unlock();
     return false;
+}
+
+void gwindow::snatch_map(){
+    this->_window_mu.lock();
+    this->key_click('M');
+    Sleep(4000);
+    this->click_wheel(100);
+    Sleep(200);
+    this->click_wheel(-25);
+    Sleep(400);
+}
+
+void gwindow::release_map(){
+    this->key_click(VK_ESCAPE);
+    Sleep(1000);
+    this->_window_mu.unlock();
+}
+
+void gwindow::force_quit(){
+    if(this->_grabing){
+        this->stop_grab();
+    }
+    this->_window = nullptr;
 }

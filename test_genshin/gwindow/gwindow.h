@@ -80,9 +80,13 @@ public:
     void push_log(const QString & input);
     bool color_judge(int x,int y,cv::Vec3b rgb);
     bool drag_map(bool level,bool vertical,bool len,bool ven);
+    void snatch_map();
+    void release_map();
+    void force_quit();
 private:
-    int _x,_y;
-    bool _grabing;
+    int _x = 0;
+    int _y = 0;
+    bool _grabing = false;
     TransparentWidget* _log = nullptr;
     cv::Mat _frame;
     HWND _window = nullptr;
