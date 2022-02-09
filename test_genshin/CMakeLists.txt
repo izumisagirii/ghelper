@@ -12,6 +12,7 @@ add_subdirectory(workthread)
 add_subdirectory(key_hook)
 add_subdirectory(gwindow)
 add_subdirectory(locatemap)
+add_subdirectory(autofish)
 
 find_package(Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
 
@@ -34,6 +35,7 @@ target_link_libraries(test_genshin PRIVATE
     workthread
     keyhook
     gwindow
+    autofish
     locate)
 
 #qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

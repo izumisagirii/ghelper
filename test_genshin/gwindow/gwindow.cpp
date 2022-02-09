@@ -108,6 +108,8 @@ void gwindow::HBitmapToMat(HBITMAP &_hBmp, cv::Mat &_mat){
     v_mat.create(cv::Size(bmp.bmWidth,bmp.bmHeight), CV_MAKETYPE(CV_8U,nChannels));
     GetBitmapBits(_hBmp,bmp.bmHeight*bmp.bmWidth*nChannels,v_mat.data);
     _mat=v_mat;
+    //int fromTo[] = {0,0,1,1,2,2};
+    //cv::mixChannels(&v_mat,1,&_mat,1,fromTo,3);
 }
 void gwindow::get_frame(cv::Mat &pic){
     this->_frame_mu.lock();

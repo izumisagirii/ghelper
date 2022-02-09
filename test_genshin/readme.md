@@ -1,5 +1,5 @@
 <a href="https://asoulwiki.com/member/diana/">关注嘉然顿顿解馋！</a><br/>
-<img src="./config/disc/diana.jpg" alt="master!"><br/>
+<img src="./config/disc/diana.webp" alt="master!"><br/>
 ## 软件介绍
 本软件基于Qt、openCV和winAPI开发<br/>
 原理是模拟鼠标和键盘操作<br/>

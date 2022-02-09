@@ -3,6 +3,7 @@
 #include <opencv2/opencv.hpp>
 #include <QTreeWidgetItem>
 #include <locate.h>
+#include <autofish.h>
 
 #define QUIT_CHECK if(!running){ \
     GHmap.force_quit();  \
@@ -11,9 +12,9 @@
 }
 
 enum SCRIPT{
-    USER_SCRIPT,TEST_LOCATE,TEST_TP,TEST_TRACK
+    USER_SCRIPT,TEST_LOCATE,TEST_TP,TEST_TRACK,TEST_CAP,AUTO_FISH
 };
-constexpr int SCRIPT_NUM = 3;
+constexpr int SCRIPT_NUM = 5;
 struct task{
     bool user;
     std::string name;
@@ -38,6 +39,8 @@ private:
     bool TASK_testTP();
     bool TASK_testLOCATE();
     bool TASK_testTRACK();
+    bool TASK_testCAP();
+    bool TASK_AUTOFISH();
     std::thread _task;
     std::thread _ending;
     bool running = false;

@@ -153,7 +153,8 @@ void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int colu
         if(_task.banner == item){
             lab.setFixedSize(250,200);
             QString str;
-            if(_task.user){
+//            if(_task.user){
+            if(true){
                 QFile file(_task.path.c_str());
                 file.open(QIODevice::ReadOnly);
                 QTextStream in(&file);

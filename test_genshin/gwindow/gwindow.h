@@ -30,7 +30,9 @@ public:
 //    }
 
     void pushText(const QString & input){
-        text.insert(text.begin(),input);
+        QString _input = QTime::currentTime().toString("[h:m:s]");
+        _input = _input + input;
+        text.insert(text.begin(),_input);
         text.pop_back();
         QString _text;
         for(const auto &t:text){
